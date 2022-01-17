@@ -19,9 +19,28 @@
       width: 26px;
       height: 2px;
       background-color: $DarkBlue;
-      
+      transition:  all 300ms ease-in-out;
+      transform-origin: 3px 1px;
+
       &:not(:last-child){
-        margin-bottom: 3px;
+        margin-bottom: 5px;
+      }
+    }
+
+    &.open {
+
+      > span:first-child {
+        transform: rotate(45deg);
+      }
+
+      > span:nth-child(2) {
+        /**we are using opacity instead of 'display:none'
+         because with display you can't user transition **/
+        opacity: 0;
+      }
+
+      > span:last-child {
+        transform: rotate(-45deg);
       }
     }
   }
