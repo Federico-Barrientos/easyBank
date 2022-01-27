@@ -17,13 +17,24 @@ body {
   font-size: $font-med;
   color: $GrayishBlue;
   font-family: 'Public Sans', sans-serif;
+
+  &.nonscroll {
+    overflow: hidden;
+  }
 }
 
 a, a:visited, a:hover {
   text-decoration: none;
 }
 
-//Flexbox
+// Spacing
+.container {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+
+// Flexbox
 .flex {
   display: flex;
 
